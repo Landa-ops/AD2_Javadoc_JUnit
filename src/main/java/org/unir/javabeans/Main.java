@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
         Suma suma = new Suma();
+        Validate validate = new Validate();
         Scanner sc = new Scanner(System.in);
         int opcion;
 
@@ -28,16 +29,16 @@ public class Main {
 
                 switch (opcion) {
                     case 1:
-                        System.out.println("Suma de dos numeros reales: " + suma.sumaDosNumerosReales(suma.validateIsDouble(), suma.validateIsDouble()));
+                        System.out.println("Suma de dos numeros reales: " + suma.sumaDosNumerosReales(validate.validateIsDouble(), validate.validateIsDouble()));
                         break;
                     case 2:
-                        System.out.println("Suma de dos numeros enteros: " + suma.sumaDosNumerosEnteros(suma.validateIsInteger(), suma.validateIsInteger()));
+                        System.out.println("Suma de dos numeros enteros: " + suma.sumaDosNumerosEnteros(validate.validateIsInteger(), validate.validateIsInteger()));
                         break;
                     case 3:
-                        System.out.println("Suma de tres numeros reales: " + suma.sumaTresNumerosReales(suma.validateIsDouble(), suma.validateIsDouble(), suma.validateIsDouble()));
+                        System.out.println("Suma de tres numeros reales: " + suma.sumaTresNumerosReales(validate.validateIsDouble(), validate.validateIsDouble(), validate.validateIsDouble()));
                         break;
                     case 4:
-                        System.out.println("Sumatorio acumulativo numeros reales o enteros: " + suma.sumaValorAcumulado(suma.validateIsDouble()));
+                        System.out.println("Sumatorio acumulativo numeros reales o enteros: " + suma.sumaValorAcumulado(validate.validateIsDouble()));
                         break;
                     default:
                         System.out.println("Opción no válida. Por favor, introduce un número entre 1 y 5.");
