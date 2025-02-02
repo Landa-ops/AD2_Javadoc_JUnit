@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Clase que realiza operaciones de resta para números reales y enteros.
  * Creación en la clase de un menu con diferentes opciones
  *
- * @author Samamntha Mohedano Barrena
+ * @author Samantha Mohedano Barrena
  *
  * @version 0.1
  */
