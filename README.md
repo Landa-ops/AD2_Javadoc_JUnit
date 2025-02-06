@@ -1,69 +1,134 @@
-Calculadora Java - Suma de Números
-Este proyecto es una calculadora simple desarrollada en Java, que permite realizar operaciones de suma con diferentes tipos de números: reales y enteros. Además, incluye una funcionalidad para realizar una suma acumulativa.
+**Calculadora: Clase Resta**
 
-Funcionalidades
-El programa permite al usuario elegir entre las siguientes opciones en el menú:
+**Descripción**
 
-Suma de dos números reales: Suma de dos números decimales (reales).
-Suma de dos números enteros: Suma de dos números enteros.
-Suma de tres números reales: Suma de tres números decimales.
-Suma con valor acumulado: Realiza la suma de un número y acumula el resultado.
-Salir: Termina la ejecución del programa.
-Requisitos
-Java 11 o superior.
-IDE recomendado: IntelliJ IDEA, Eclipse o cualquier otro compatible con Java.
-Instalación
-Para ejecutar el proyecto en tu máquina local, sigue los siguientes pasos:
+Este proyecto contiene una clase en Java llamada Resta_SamanthaMohedano, que permite realizar diversas operaciones de resta sobre números reales y enteros. Además, incluye un menú interactivo que permite al usuario elegir entre diferentes opciones de operaciones matemáticas de resta.
 
-Clona este repositorio o descarga los archivos.
 
-bash
-Copiar código
-git clone https://github.com/tu_usuario/calculadora-java.git
-Abre el proyecto en tu IDE favorito.
+**Funcionalidades**
+- Resta de dos números reales.  
+- Resta de dos números enteros.  
+- Resta de tres números reales.
+- Resta acumulada de un valor.
 
-Ejecuta la clase Main.java para interactuar con la calculadora desde la consola.
+El programa valida las entradas del usuario, garantizando que se ingresen valores válidos y no nulos. Además, maneja excepciones si se intenta realizar una operación con valores no permitidos, como null o 0.
 
-Uso
-Al ejecutar el programa, se presentará un menú con varias opciones. El usuario puede ingresar la opción deseada e introducir los números para realizar las operaciones de suma. El programa validará la entrada de datos y mostrará los resultados.
 
-Ejemplo de ejecución:
-plaintext
-Copiar código
-========= MENU ==========
-1. Suma Dos Numeros Reales
-2. Suma Dos Numeros Enteros
-3. Suma Tres Numeros Reales
-4. Suma Con Valor Acumulado
-5. Exit
----------------------------------------
-+++ Seleccione que quiere sumar +++
+**Características**
 
-Introduzca un numero real: 3.5
-Introduzca un numero real: 2.7
-Suma de dos numeros reales: 6.2
-Tests
-El proyecto incluye una serie de pruebas unitarias utilizando JUnit para garantizar el correcto funcionamiento de las funciones de suma.
+- Interfaz interactiva con un menú que permite elegir la operación de resta. 
+- Validación de entradas para asegurar que el usuario ingrese números válidos. 
+- Excepciones controladas para gestionar situaciones como valores nulos o entradas inválidas.
 
-Para ejecutar las pruebas:
 
-Asegúrate de tener JUnit 5 configurado en tu entorno.
-Ejecuta la clase de pruebas TestsSumaCalculadora.java desde tu IDE.
-Funciones principales
-Suma dos números reales: sumaDosNumerosReales(Double num1, Double num2)
-Suma dos números enteros: sumaDosNumerosEnteros(Integer num1, Integer num2)
-Suma tres números reales: sumaTresNumerosReales(Double num1, Double num2, Double num3)
-Suma con valor acumulado: sumaValorAcumulado(Double num)
-Validaciones
-El programa valida que los números introducidos no sean nulos ni negativos. Si se detecta un valor no válido, se lanza una excepción IllegalArgumentException.
+**Requisitos**
 
-Contribuciones
-Si deseas contribuir al proyecto, por favor sigue estos pasos:
+- JDK 8 o superior.
+- Un editor de código (como IntelliJ IDEA, Eclipse o cualquier editor de texto).
 
-Realiza un fork del repositorio.
-Crea una nueva rama para tu característica o corrección (git checkout -b feature/nueva-caracteristica).
-Realiza tus cambios y haz commit (git commit -am 'Añadir nueva característica').
-Realiza un push a tu rama (git push origin feature/nueva-caracteristica).
-Abre un Pull Request.
-Licencia
-Este proyecto está licenciado bajo la Licencia MIT.
+
+**Instalación**
+
+- Paso 1: Clona el repositorio
+Clona el repositorio a tu máquina local usando el siguiente comando:
+git clone https://github.com/usuario/AD2_Javadoc_JUnit.git
+
+- Paso 2: Compila el proyecto
+Una vez clonado el repositorio, abre el archivo Java en tu IDE favorito y compílalo. Si prefieres usar la línea de comandos, puedes usar los siguientes comandos: cd ruta/al/repositorio
+javac Resta_SamanthaMohedano.java
+
+- Paso 3: Ejecuta el programa 
+Para ejecutar el programa, usa el siguiente comando en la terminal:
+java Resta_SamanthaMohedano
+
+
+**Uso** 
+
+Al ejecutar el programa, se te presentará un menú interactivo en la consola con las siguientes opciones:
+
+Selecciona una opción
+1. Resta dos reales
+2. Resta dos enteros
+3. Resta tres reales
+4. Resta acumulada
+5. Salir 
+
+Dependiendo de la opción que elijas, el programa pedirá que ingreses los números correspondientes y luego mostrará el resultado de la operación seleccionada.
+
+
+**Ejemplo de código**
+
+public class Resta_SamanthaMohedano {
+
+    private double acum = 0;
+
+    // Constructor
+    public Resta_SamanthaMohedano() {
+        super();
+    }
+
+    // Método que muestra el menú
+    public void menuResta() {
+        Scanner sc = new Scanner(System.in);
+        boolean salida = false;
+        int opcion = 0;
+
+        do {
+            System.out.println("Selecciona una opción");
+            System.out.println("1. Resta dos reales");
+            System.out.println("2. Resta dos enteros");
+            System.out.println("3. Resta tres reales");
+            System.out.println("4. Resta acumulada");
+            System.out.println("5. Salir");
+
+            opcion = sc.nextInt();
+            sc.nextLine();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("La resta de tus dos números reales es: " +
+                            restaDosReales(valida.validateIsDouble(), valida.validateIsDouble()));
+                    break;
+                case 2:
+                    System.out.println("La resta de tus dos números enteros es: " +
+                            restaDosEnteros(valida.validateIsInteger(), valida.validateIsInteger()));
+                    break;
+                case 3:
+                    System.out.println("La resta de tus tres números reales es: " +
+                            restaTresReales(valida.validateIsDouble(), valida.validateIsDouble(), valida.validateIsDouble()));
+                    break;
+                case 4:
+                    System.out.println("El valor acumulado después de la resta es: " +
+                            restaValorAcumulado(valida.validateIsDouble()));
+                    break;
+                case 5:
+                    System.out.println("Volviendo al menú principal");
+                    salida = true;
+                    break;
+                default:
+                    System.out.println("Opción no válida. Por favor, intente de nuevo.");
+                    break;
+            }
+        } while (!salida);
+    }
+
+    // Métodos de resta
+    public double restaDosReales(Double a, Double b) { ... }
+    public int restaDosEnteros(Integer a, Integer b) { ... }
+    public double restaTresReales(Double a, Double b, Double c) { ... }
+    public double restaValorAcumulado(Double num) { ... }
+}
+
+**Contribuciones**
+
+¡Las contribuciones son bienvenidas! Si deseas contribuir al proyecto, sigue estos pasos:
+
+- Haz un fork del repositorio. 
+- Crea una nueva rama (git checkout -b feature/nueva-caracteristica)
+- Realiza tus cambios y haz commit (git commit -am 'Añadir nueva característica'). 
+- Haz push a tu rama (git push origin feature/nueva-caracteristica). 
+- Abre un pull request.
+
+**Licencia**
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
