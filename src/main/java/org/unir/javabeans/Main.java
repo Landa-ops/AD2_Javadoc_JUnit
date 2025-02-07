@@ -26,32 +26,33 @@ public class Main {
             sc.nextLine();
 
             switch (opcion) {
-                    case 1:
+                case 1:
+                    Suma_JonLandaluce suma = new Suma_JonLandaluce();
+                    suma.menuSuma();
+                    break;
+                case 2:
+                    Resta_SamanthaMohedano resta= new Resta_SamanthaMohedano();
+                    resta.menuResta();
+                    break;
+                case 3:
 
+                case 4:
 
-                    case 2:
-                        Resta_SamanthaMohedano resta= new Resta_SamanthaMohedano();
-                        resta.menuResta();
-                        break;
-                    case 3:
+                case 5:
 
-                    case 4:
+                case 6:
 
-                    case 5:
+                case 7:
 
-                    case 6:
+                case 8:
 
-                    case 7:
-
-                    case 8:
-
-                    case 9:
-                        System.out.println("¡Adiós!");
-                        salida = true;
-                        break;
-                    default:
-                        System.out.println("Opción no válida. Por favor, introduce un número entre 1 y 9.");
-                }
+                case 9:
+                    System.out.println("¡Adiós!");
+                    salida = true;
+                    break;
+                default:
+                    System.out.println("Opción no válida. Por favor, introduce un número entre 1 y 9.");
+            }
         }while(!salida);
 
         sc.close();
