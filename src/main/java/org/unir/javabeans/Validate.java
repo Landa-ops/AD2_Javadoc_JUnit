@@ -2,19 +2,7 @@ package org.unir.javabeans;
 
 import java.util.Scanner;
 
-/**
- * Clase para la validación de los números introducidos
- *
- */
-
 public class Validate {
-
-    /**
-     * Con este metodo se realiza la validación de dos números reales.
-     *
-     * @param num Número introducido
-     * @return Número validado como real.
-     */
 
     public Double validateIsDouble() {
         Scanner sc = new Scanner(System.in);
@@ -33,13 +21,6 @@ public class Validate {
         }
         return num;
     }
-
-    /**
-     * Con este metodo se realiza la validación de dos números enteros
-     *
-     * @param num Número introducido
-     * @return Número validado como entero.
-     */
 
     public Integer validateIsInteger() {
         Scanner sc = new Scanner(System.in);
