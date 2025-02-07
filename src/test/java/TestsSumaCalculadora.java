@@ -10,7 +10,7 @@ public class TestsSumaCalculadora {
 
     @BeforeEach
     public void setUp() throws Exception {
-        suma = new Suma();  // Asegúrate de que el objeto se inicialice antes de cada test
+        suma = new Suma();
     }
 
     @Test
