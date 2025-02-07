@@ -3,7 +3,7 @@ package org.unir.javabeans;
 import java.util.Scanner;
 
 /**
- * Clase que implementa operaciones relacionadas con la división
+ * Clase que implementa operaciones relacionadas con la divisiónppppp
  *
  * @author César A. Alcázar
  * @version alfa 0.1
