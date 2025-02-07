@@ -35,7 +35,9 @@ public class Main {
                     resta.menuResta();
                     break;
                 case 3:
-
+                    MultiplicacionArantzaAlcazar multiplicacion = new MultiplicacionArantzaAlcazar();
+                    multiplicacion.menuMultiplicacion();
+                    break;
                 case 4:
 
                 case 5:

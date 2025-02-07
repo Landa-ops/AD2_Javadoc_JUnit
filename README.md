@@ -150,3 +150,87 @@ Este proyecto está bajo la **Licencia MIT**. Consulta el archivo `LICENSE` para
 ---
 ### 💡 Autor: Samantha Mohedano
 
+📌 Calculadora en Java
+Este proyecto es una calculadora interactiva desarrollada en Java que permite realizar operaciones de multiplicación y potenciación. Incluye validaciones de entrada para asegurar que los valores sean positivos y pruebas unitarias con JUnit.
+
+🚀 Instrucciones de Uso
+Abre el proyecto en tu IDE favorito.
+Ejecuta la clase Main.java para interactuar con la calculadora desde la consola.
+Al ejecutar el programa, se mostrará un menú con varias opciones. El usuario podrá seleccionar la operación deseada e ingresar los valores necesarios.
+
+📌 Ejemplo de Ejecución
+markdown
+Copiar
+Editar
+========= MENÚ ==========
+1. Multiplicación de dos números reales
+2. Multiplicación de dos números enteros
+3. Multiplicación de tres números reales
+4. Potencia de un número real
+5. Salir
+-------------------------
++++ Seleccione la operación +++
+
+Introduce el primer número real: 3.5
+Introduce el segundo número real: 2.7
+Resultado: 9.45
+🔧 Funcionalidades
+Multiplicación
+Multiplicación de dos números reales: multiDosReales(double num1, double num2)
+Multiplicación de dos números enteros: multiDosEnteros(int num1, int num2)
+Multiplicación de tres números reales: multiTresReales(double num1, double num2, double num3)
+Potencia
+Potencia de un número real: potencia(double base, int exponente)
+🛠️ Validaciones y Excepciones
+El programa valida que los valores ingresados sean:
+
+✅ No negativos
+
+Si se ingresa un valor incorrecto, se lanza una excepción IllegalArgumentException con el mensaje "Los números no pueden ser negativos".
+
+🧪 Tests
+El proyecto incluye pruebas unitarias con JUnit para garantizar el correcto funcionamiento de las operaciones.
+
+🔹 Para ejecutar las pruebas:
+Asegúrate de tener JUnit 5 configurado.
+Ejecuta la clase de pruebas TestsMultiplicacionCalculadora.java desde tu IDE.
+📌 Instalación
+📥 Clonar el repositorio
+sh
+Copiar
+Editar
+git clone https://github.com/usuario/CalculadoraMultiplicacionPotencia.git
+🔧 Compilar el proyecto
+Si usas la terminal:
+
+sh
+Copiar
+Editar
+cd ruta/al/repositorio
+javac Main.java
+▶️ Ejecutar el programa
+sh
+Copiar
+Editar
+java Main
+📄 Ejemplo de Código
+java
+Copiar
+Editar
+package org.unir.javabeans;
+
+/**
+* Clase Multiplicacion que proporciona métodos para realizar operaciones matemáticas
+* relacionadas con la multiplicación y la potenciación, contemplando excepciones.
+*
+* @autor Arantza Alcázar
+* @version 1.0
+  */
+  public class MultiplicacionArantzaAlcazar {
+
+  /**
+    * Método para multiplicar dos números reales.
+    *
+    * @param num1 Primer número real a multiplicar.
+    * @param num2 Segundo número real a multiplicar.
+    * @return El resultado de la multiplicación de num1 y num2
