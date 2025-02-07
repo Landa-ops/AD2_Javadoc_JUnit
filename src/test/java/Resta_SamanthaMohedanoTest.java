@@ -1,7 +1,6 @@
-package org.unir.javabeans;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.unir.javabeans.Resta_SamanthaMohedano;
 
 import static org.junit.jupiter.api.Assertions.*;
 
