@@ -4,49 +4,56 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Suma suma = new Suma();
         Scanner sc = new Scanner(System.in);
-        int opcion;
+        boolean salida = false;
+        int opcion = 0;
 
-        while (true) {
+        do {
+            System.out.println("Selecciona una opción");
             System.out.println("========= MENU ==========");
-            System.out.println("1. Suma Dos Numeros Reales ");
-            System.out.println("2. Suma Dos Numeros Enteros ");
-            System.out.println("3. Suma Tres Numeros Reales ");
-            System.out.println("4. Suma Con Valor Acumulado");
-            System.out.println("5. Exit");
-            System.out.println("---------------------------------------");
-            System.out.println("+++ Seleccione que quiere sumar +++");
+            System.out.println("1.SUMA");
+            System.out.println("2.RESTA");
+            System.out.println("3.PRODUCTO");
+            System.out.println("4.COCIENTE");
+            System.out.println("5.MODULO");
+            System.out.println("6.ESTADISTICA");
+            System.out.println("7.CONVERSION");
+            System.out.println("8.      ");
+            System.out.println("9.SALIR");
+            System.out.println("=========================");
 
-            if (sc.hasNextInt()) {
-                opcion = sc.nextInt();
+            opcion = sc.nextInt();
+            sc.nextLine();
 
-                if (opcion == 5) {
-                    System.out.println("Saliendo del programa. Hasta luego!");
+            switch (opcion) {
+                case 1:
+                    Suma_JonLandaluce suma = new Suma_JonLandaluce();
+                    suma.menuSuma();
                     break;
-                }
+                case 2:
+                    Resta_SamanthaMohedano resta= new Resta_SamanthaMohedano();
+                    resta.menuResta();
+                    break;
+                case 3:
 
-                switch (opcion) {
-                    case 1:
-                        System.out.println("Suma de dos numeros reales: " + suma.sumaDosNumerosReales(suma.validateIsDouble(), suma.validateIsDouble()));
-                        break;
-                    case 2:
-                        System.out.println("Suma de dos numeros enteros: " + suma.sumaDosNumerosEnteros(suma.validateIsInteger(), suma.validateIsInteger()));
-                        break;
-                    case 3:
-                        System.out.println("Suma de tres numeros reales: " + suma.sumaTresNumerosReales(suma.validateIsDouble(), suma.validateIsDouble(), suma.validateIsDouble()));
-                        break;
-                    case 4:
-                        System.out.println("Sumatorio acumulativo numeros reales o enteros: " + suma.sumaValorAcumulado(suma.validateIsDouble()));
-                        break;
-                    default:
-                        System.out.println("Opción no válida. Por favor, introduce un número entre 1 y 5.");
-                }
-            } else {
-                System.out.println("Entrada inválida. Por favor, introduce un número entre 1 y 5.");
-                sc.next();
+                case 4:
+
+                case 5:
+
+                case 6:
+
+                case 7:
+
+                case 8:
+
+                case 9:
+                    System.out.println("¡Adiós!");
+                    salida = true;
+                    break;
+                default:
+                    System.out.println("Opción no válida. Por favor, introduce un número entre 1 y 9.");
             }
-        }
+        }while(!salida);
 
         sc.close();
     }

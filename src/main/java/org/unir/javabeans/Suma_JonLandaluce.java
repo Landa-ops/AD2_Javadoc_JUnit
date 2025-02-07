@@ -2,7 +2,7 @@ package org.unir.javabeans;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Suma {
+public class Suma_JonLandaluce {
 
     /**
      * Clase que hace operaciones de suma en una calculadora.
@@ -27,11 +27,11 @@ public class Suma {
     private Integer num5;
     private static Double acumulator = 0.0;
 
-    public Suma() {
+    public Suma_JonLandaluce() {
         super();
     }
 
-    public Suma(Double num1, Double num2, Double num3, Integer num4, Integer num5) {
+    public Suma_JonLandaluce(Double num1, Double num2, Double num3, Integer num4, Integer num5) {
         super();
         this.num1 = num1;
         this.num2 = num2;
@@ -85,7 +85,7 @@ public class Suma {
     }
 
     public static void setAcumulator(Double acumulator) {
-        Suma.acumulator = acumulator;
+        Suma_JonLandaluce.acumulator = acumulator;
     }
 
     @Override
@@ -106,10 +106,64 @@ public class Suma {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Suma other = (Suma) obj;
+        Suma_JonLandaluce other = (Suma_JonLandaluce) obj;
         return Objects.equals(num1, other.num1) && Objects.equals(num2, other.num2) && Objects.equals(num3, other.num3)
                 && Objects.equals(num4, other.num4) && Objects.equals(num5, other.num5);
     }
+
+
+    /**
+     * Muestra un menú para elegir qué operación de resta realizar.
+     */
+    public void menuSuma() {
+
+        Validate valida = new Validate();
+
+        Scanner sc = new Scanner(System.in);
+        boolean salida = false;
+        int opcion = 0;
+        do{
+            System.out.println("Selecciona una opción");
+            System.out.println("1.Suma dos reales");
+            System.out.println("2.Suma dos enteros");
+            System.out.println("3.Suma tres reales");
+            System.out.println("4.Suma acumulada");
+            System.out.println("5.Salir");
+
+            opcion = sc.nextInt();
+            sc.nextLine();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println( "La suma de tus dos números reales es : " +
+                            sumaDosNumerosReales(valida.validateIsDouble(), valida.validateIsDouble()));
+                    break;
+                case 2:
+                    System.out.println( "La suma de tus dos números enteros es : " +
+                            sumaDosNumerosEnteros(valida.validateIsInteger(), valida.validateIsInteger()));
+                    break;
+                case 3:
+                    System.out.println( "La suma de tus tres números reales es : " +
+                            sumaTresNumerosReales(valida.validateIsDouble(), valida.validateIsDouble(),
+                                    valida.validateIsDouble()));
+                    break;
+                case 4:
+                    System.out.println( "El valor acumulado después de la resta es : " +
+                            sumaValorAcumulado(valida.validateIsDouble()));
+                    break;
+                case 5:
+                    System.out.println("Volviendo al menú principal");
+                    salida = true;
+                    break;
+                default:
+                    System.out.println("Opción no válida. Por favor, intente de nuevo.");
+                    break;
+            }
+        }while(!salida);
+
+
+    }
+
 
     /*
      * Suma dos números reales.
@@ -136,7 +190,7 @@ public class Suma {
         return num1 + num2;
     }
 
-    /*
+    /**
      * Suma dos números enteros.
      *
      * Este metodo realiza la suma de dos números enteros, pero imprime un mensaje
@@ -161,7 +215,7 @@ public class Suma {
         return num3 + num4;
     }
 
-    /*
+    /**
      * Suma tres números reales.
      *
      * Este metodo realiza la suma acumulativa de tres números reales, pero imprime
@@ -203,40 +257,5 @@ public class Suma {
         return acumulator;
     }
 
-    public Double validateIsDouble() {
-        Scanner sc = new Scanner(System.in);
-        Double num = null;
-        boolean valido = false;
-
-        while (!valido) {
-            System.out.print("Introduzca un numero real: ");
-            if (sc.hasNextDouble()) {
-                num = sc.nextDouble();
-                valido = true;
-            } else {
-                System.out.println("Entrada invalida, introduzca un numero real: ");
-                sc.next();
-            }
-        }
-        return num;
-    }
-
-    public Integer validateIsInteger() {
-        Scanner sc = new Scanner(System.in);
-        Integer num = null;
-        boolean valido = false;
-
-        while (!valido) {
-            System.out.print("Introduzca un numero entero: ");
-            if (sc.hasNextInt()) {
-                num = sc.nextInt();
-                valido = true;
-            } else {
-                System.out.println("Entrada invalida, introduzca un numero entero: ");
-                sc.next();
-            }
-        }
-        return num;
-    }
 
 }

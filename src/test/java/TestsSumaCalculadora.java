@@ -1,16 +1,16 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.unir.javabeans.Suma;
+import org.unir.javabeans.Suma_JonLandaluce;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestsSumaCalculadora {
 
-    private Suma suma;
+    private Suma_JonLandaluce suma;
 
     @BeforeEach
     public void setUp() throws Exception {
-        suma = new Suma();
+        suma = new Suma_JonLandaluce();
     }
 
     @Test
