@@ -10,7 +10,7 @@ package org.unir.javabeans;
 public class Division {
 
     /**
-     * Realizamos la división de dos números reales.
+     * Realizamos la división de dos números reales si el sistema quiere.
      *
      * @param num1 Este es el dividendo de un número real.
      * @param num2 Este es el divisor de un número real.
