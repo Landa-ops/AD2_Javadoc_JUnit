@@ -39,7 +39,9 @@ public class Main {
                     multiplicacion.menuMultiplicacion();
                     break;
                 case 4:
-
+                    Division division = new Division();;
+                    division.menuDivision();
+                    break;
                 case 5:
 
                 case 6:
