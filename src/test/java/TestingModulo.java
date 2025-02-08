@@ -1,5 +1,3 @@
-package test;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.unir.javabeans.Modulo_EvaLopez;
