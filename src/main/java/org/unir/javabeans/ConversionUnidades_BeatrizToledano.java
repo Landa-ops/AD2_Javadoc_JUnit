@@ -1,4 +1,4 @@
-package AD2_Javadoc_JUnit.src.main.java.org.unir.javabeans;
+package org.unir.javabeans;
 
 import java.util.Scanner;
 
@@ -98,12 +98,12 @@ public class ConversionUnidades_BeatrizToledano {
                 case 3:
                     System.out.println("Dame un numero");
                     double num3 = entrada.nextDouble();
-                    System.out.println(gradosARadianes(num3) + "radianes");
+                    System.out.println(gradosARadianes(num3) + " radianes");
                     break;
                 case 4:
                     System.out.println("Dame un numero");
                     double num4 = entrada.nextDouble();
-                    System.out.println(radianesAGrados(num4) + "grados");
+                    System.out.println(radianesAGrados(num4) + " grados");
                     break;
                 case 5:
                     System.out.println("Saliendo...");

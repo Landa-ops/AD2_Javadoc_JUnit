@@ -1,6 +1,4 @@
-package AD2_Javadoc_JUnit.src.test.java;
-
-import AD2_Javadoc_JUnit.src.main.java.org.unir.javabeans.ConversionUnidades_BeatrizToledano;
+import org.unir.javabeans.ConversionUnidades_BeatrizToledano;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
