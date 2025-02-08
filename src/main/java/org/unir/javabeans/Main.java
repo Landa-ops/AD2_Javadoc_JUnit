@@ -43,11 +43,17 @@ public class Main {
                     division.menuDivision();
                     break;
                 case 5:
-
+                    Modulo_EvaLopez modulo = new Modulo_EvaLopez();
+                    modulo.menuModulo();
+                    break;
                 case 6:
-
+                    Estadistica_AndreeaIstrate estadistica = new Estadistica_AndreeaIstrate();
+                    estadistica.menuEstadistica();
+                    break;
                 case 7:
-
+                    ConversionUnidades_BeatrizToledano conversor = new ConversionUnidades_BeatrizToledano();
+                    conversor.menuConversion();
+                    break;
                 case 8:
 
                 case 9:
