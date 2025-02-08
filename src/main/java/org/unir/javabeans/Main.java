@@ -41,7 +41,9 @@ public class Main {
                 case 4:
 
                 case 5:
-
+                    Modulo_EvaLopez modulo = new Modulo_EvaLopez();
+                    modulo.menuModulo();
+                    break;
                 case 6:
 
                 case 7:

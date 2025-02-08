@@ -34,16 +34,18 @@ public class Modulo_EvaLopez {
             opcion = leer.nextInt();
             switch(opcion){
                 case 1:
-                    calcularModulo();
+                    System.out.println("El módulo es: "+ calcularModulo());
                     break;
                 case 2:
-                    calcularValorAbsoluto();
+                    System.out.println("El valor absoluto es: "+ calcularValorAbsoluto());
                     break;
+                default:
+                    System.out.println("Opcion no valida. Selecciona 1 o 2");
             }
         } while(
-            opcion != 1 && opcion != 2);
+            opcion < 1 || opcion > 2);
 
-        System.out.println("Opción incorrecta. Seleccione 1 o 2.");
+        // System.out.println("Opción incorrecta. Seleccione 1 o 2.");
     }
 
 
