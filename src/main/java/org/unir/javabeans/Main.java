@@ -45,7 +45,8 @@ public class Main {
                     modulo.menuModulo();
                     break;
                 case 6:
-
+                    Estadistica_AndreeaIstrate estadistica = new Estadistica_AndreeaIstrate();
+                    estadistica.menuEstadistica();
                 case 7:
 
                 case 8:
