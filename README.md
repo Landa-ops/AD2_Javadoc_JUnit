@@ -1,236 +1,62 @@
-# 📌 Calculadora en Java
+# :globe_with_meridians: Clase `ConversionUnidades_BeatrizToledano`
 
-Este proyecto es una calculadora interactiva desarrollada en Java, que permite realizar operaciones de suma y resta. Incluye validaciones de entrada y pruebas unitarias con JUnit.
-
-## 🚀 Instrucciones de Uso
-
-1. Abre el proyecto en tu IDE favorito.
-2. Ejecuta la clase `Main.java` para interactuar con la calculadora desde la consola.
-
-Al ejecutar el programa, se mostrará un menú con varias opciones. El usuario podrá seleccionar la operación deseada e ingresar los valores necesarios.
-
-### 📌 Ejemplo de Ejecución
-```
-========= MENU ==========
-1. Suma Dos Números Reales
-2. Suma Dos Números Enteros
-3. Suma Tres Números Reales
-4. Suma Con Valor Acumulado
-5. Resta Dos Números Reales
-6. Resta Dos Números Enteros
-7. Resta Tres Números Reales
-8. Resta Acumulada
-9. Salir
-------------------------
-+++ Seleccione la operación +++
-
-Introduzca un número real: 3.5
-Introduzca otro número real: 2.7
-Resultado: 6.2
-```
+La clase `ConversionUnidades_BeatrizToledano` permite realizar conversiones entre **Celsius** y **Fahrenheit**, así como entre **grados** y **radianes**. Los usuarios pueden interactuar con el programa a través de un menú interactivo, que les permite seleccionar la conversión que desean realizar. El programa también gestiona errores de entrada, como valores no numéricos, mediante excepciones.
 
 ---
-## 🔧 Funcionalidades
 
-### **Suma**
-- Suma dos números reales: `sumaDosNumerosReales(Double num1, Double num2)`
-- Suma dos números enteros: `sumaDosNumerosEnteros(Integer num1, Integer num2)`
-- Suma tres números reales: `sumaTresNumerosReales(Double num1, Double num2, Double num3)`
-- Suma con valor acumulado: `sumaValorAcumulado(Double num)`
+## :wrench: Funcionalidad
 
-### **Resta**
-- Resta dos números reales: `restaDosReales(Double num1, Double num2)`
-- Resta dos números enteros: `restaDosEnteros(Integer num1, Integer num2)`
-- Resta tres números reales: `restaTresReales(Double num1, Double num2, Double num3)`
-- Resta acumulada: `restaValorAcumulado(Double num)`
+El código tiene las siguientes funcionalidades principales:
+
+1. :thermometer: Conversión de **Celsius** a **Fahrenheit**.
+2. :thermometer: Conversión de **Fahrenheit** a **Celsius**.
+3. :triangular_ruler: Conversión de **grados** a **radianes**.
+4. :triangular_ruler: Conversión de **radianes** a **grados**.
+5. :gear: Menú interactivo para que el usuario seleccione la conversión que desea realizar.
+6. :warning: **Manejo de excepciones**: El código valida las entradas y muestra mensajes de error si el usuario introduce valores no numéricos.
 
 ---
-## 🛠️ Validaciones y Excepciones
 
-El programa valida que los valores ingresados sean:
-✅ No nulos
-✅ No negativos (cuando aplique)
-✅ Números válidos
+## :memo: Detalles del código
 
-Si se ingresa un valor incorrecto, se lanza una excepción `IllegalArgumentException`.
+### :lock: Atributos privados
 
----
-## 🧪 Tests
+La clase tiene cuatro atributos privados:
 
-El proyecto incluye pruebas unitarias con JUnit para garantizar el correcto funcionamiento de las operaciones.
+- `celsius`: Almacena el valor en grados **Celsius**.
+- `fahrenheit`: Almacena el valor en grados **Fahrenheit**.
+- `grados`: Almacena el valor en **grados**.
+- `radianes`: Almacena el valor en **radianes**.
 
-### 🔹 Para ejecutar las pruebas:
-1. Asegúrate de tener **JUnit 5** configurado.
-2. Ejecuta la clase de pruebas `TestsSumaCalculadora.java` desde tu IDE.
+### :arrows_counterclockwise: Métodos de conversión
 
----
-## 📌 Instalación
+- `celsiusAFahrenheit(double celsius)`: Convierte de **Celsius** a **Fahrenheit**.
+- `fahrenheitACelsius(double fahrenheit)`: Convierte de **Fahrenheit** a **Celsius**.
+- `gradosARadianes(double grados)`: Convierte de **grados** a **radianes**.
+- `radianesAGrados(double radianes)`: Convierte de **radianes** a **grados**.
 
-### 📥 Clonar el repositorio
-```sh
-git clone https://github.com/usuario/AD2_Javadoc_JUnit.git
-```
+### :pencil2: Método `toString()`
 
-### 🔧 Compilar el proyecto
-Si usas la terminal:
-```sh
-cd ruta/al/repositorio
-javac Main.java
-```
+Sobrescribe el método `toString` para representar el objeto `ConversionUnidades_BeatrizToledano` de forma legible, mostrando los valores actuales de `celsius`, `fahrenheit`, `grados` y `radianes`.
 
-### ▶️ Ejecutar el programa
-```sh
-java Main
-```
+### :computer: Menú interactivo (`menuConversion`)
+
+El método `menuConversion` proporciona un menú en la consola donde el usuario puede elegir una opción de conversión. El menú permite realizar las conversiones mencionadas y proporciona la opción de salir del programa (opción 5). Además, se utiliza un bucle `do-while` para permitir que el usuario realice múltiples conversiones sin necesidad de reiniciar el programa. Si el usuario introduce una opción inválida o un valor no numérico, el programa gestionará el error y pedirá de nuevo la entrada.
 
 ---
-## 📄 Ejemplo de Código
 
-```java
-public class Resta_SamanthaMohedano {
+## :arrow_forward: Ejemplo de uso
 
-    private double acum = 0;
+El flujo del programa es el siguiente:
 
-    public void menuResta() {
-        Scanner sc = new Scanner(System.in);
-        boolean salida = false;
-        int opcion;
-
-        do {
-            System.out.println("Selecciona una opción");
-            System.out.println("1. Resta dos reales");
-            System.out.println("2. Resta dos enteros");
-            System.out.println("3. Resta tres reales");
-            System.out.println("4. Resta acumulada");
-            System.out.println("5. Salir");
-
-            opcion = sc.nextInt();
-            sc.nextLine();
-
-            switch (opcion) {
-                case 1:
-                    System.out.println("Resultado: " + restaDosReales(5.0, 3.2));
-                    break;
-                case 2:
-                    System.out.println("Resultado: " + restaDosEnteros(8, 4));
-                    break;
-                case 3:
-                    System.out.println("Resultado: " + restaTresReales(9.5, 2.3, 1.2));
-                    break;
-                case 4:
-                    System.out.println("Acumulado: " + restaValorAcumulado(2.0));
-                    break;
-                case 5:
-                    salida = true;
-                    break;
-                default:
-                    System.out.println("Opción no válida.");
-            }
-        } while (!salida);
-    }
-}
-```
+1. El usuario ve el menú con las opciones de conversión.
+2. Selecciona la opción que desea (por ejemplo, convertir de **Celsius** a **Fahrenheit**).
+3. Introduce el valor numérico que desea convertir.
+4. El programa realiza la conversión y muestra el resultado.
+5. El programa le permite al usuario realizar otra conversión o salir.
 
 ---
-## 🤝 Contribuciones
 
-¡Las contribuciones son bienvenidas! Para contribuir:
+## :warning: Manejo de errores
 
-1. Realiza un **fork** del repositorio.
-2. Crea una **nueva rama** (`git checkout -b feature/nueva-caracteristica`).
-3. Realiza los cambios y haz **commit** (`git commit -am 'Añadir nueva característica'`).
-4. Haz **push** a la rama (`git push origin feature/nueva-caracteristica`).
-5. Abre un **Pull Request**.
-
----
-## 📜 Licencia
-
-Este proyecto está bajo la **Licencia MIT**. Consulta el archivo `LICENSE` para más detalles.
-
----
-### 💡 Autor: Samantha Mohedano
-
-📌 Calculadora en Java
-Este proyecto es una calculadora interactiva desarrollada en Java que permite realizar operaciones de multiplicación y potenciación. Incluye validaciones de entrada para asegurar que los valores sean positivos y pruebas unitarias con JUnit.
-
-🚀 Instrucciones de Uso
-Abre el proyecto en tu IDE favorito.
-Ejecuta la clase Main.java para interactuar con la calculadora desde la consola.
-Al ejecutar el programa, se mostrará un menú con varias opciones. El usuario podrá seleccionar la operación deseada e ingresar los valores necesarios.
-
-📌 Ejemplo de Ejecución
-markdown
-Copiar
-Editar
-========= MENÚ ==========
-1. Multiplicación de dos números reales
-2. Multiplicación de dos números enteros
-3. Multiplicación de tres números reales
-4. Potencia de un número real
-5. Salir
--------------------------
-+++ Seleccione la operación +++
-
-Introduce el primer número real: 3.5
-Introduce el segundo número real: 2.7
-Resultado: 9.45
-🔧 Funcionalidades
-Multiplicación
-Multiplicación de dos números reales: multiDosReales(double num1, double num2)
-Multiplicación de dos números enteros: multiDosEnteros(int num1, int num2)
-Multiplicación de tres números reales: multiTresReales(double num1, double num2, double num3)
-Potencia
-Potencia de un número real: potencia(double base, int exponente)
-🛠️ Validaciones y Excepciones
-El programa valida que los valores ingresados sean:
-
-✅ No negativos
-
-Si se ingresa un valor incorrecto, se lanza una excepción IllegalArgumentException con el mensaje "Los números no pueden ser negativos".
-
-🧪 Tests
-El proyecto incluye pruebas unitarias con JUnit para garantizar el correcto funcionamiento de las operaciones.
-
-🔹 Para ejecutar las pruebas:
-Asegúrate de tener JUnit 5 configurado.
-Ejecuta la clase de pruebas TestsMultiplicacionCalculadora.java desde tu IDE.
-📌 Instalación
-📥 Clonar el repositorio
-sh
-Copiar
-Editar
-git clone https://github.com/usuario/CalculadoraMultiplicacionPotencia.git
-🔧 Compilar el proyecto
-Si usas la terminal:
-
-sh
-Copiar
-Editar
-cd ruta/al/repositorio
-javac Main.java
-▶️ Ejecutar el programa
-sh
-Copiar
-Editar
-java Main
-📄 Ejemplo de Código
-java
-Copiar
-Editar
-package org.unir.javabeans;
-
-/**
-* Clase Multiplicacion que proporciona métodos para realizar operaciones matemáticas
-* relacionadas con la multiplicación y la potenciación, contemplando excepciones.
-*
-* @autor Arantza Alcázar
-* @version 1.0
-  */
-  public class MultiplicacionArantzaAlcazar {
-
-  /**
-    * Método para multiplicar dos números reales.
-    *
-    * @param num1 Primer número real a multiplicar.
-    * @param num2 Segundo número real a multiplicar.
-    * @return El resultado de la multiplicación de num1 y num2
+El código maneja los errores de entrada mediante el uso de un bloque `try-catch`. Si el usuario introduce un valor no numérico, el programa captura la excepción y muestra un mensaje de error adecuado. Esto ayuda a evitar que el programa se cierre inesperadamente debido a entradas incorrectas.
